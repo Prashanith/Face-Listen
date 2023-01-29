@@ -36,9 +36,6 @@ def getExpression(path):
         fc = gray_fr[y:y+h, x:x+w]
         roi = cv2.resize(fc, (48, 48))
         pred = model.predict_emotion(roi[np.newaxis, :, :, np.newaxis])
-        print("------------------------------------------")
-        print(pred)
-        print("------------------------------------------")
         cv2.putText(fr, pred, (x, y), font, 1, (255, 255, 0), 2)
         cv2.rectangle(fr,(x,y),(x+w,y+h),(255,0,0),2)
     return fr
