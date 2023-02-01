@@ -27,6 +27,7 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 
 
 def getExpression(path):
+    pred = ''
     if(path is None):
         path = '/home/dev007/DEV007/Projects/music_recommendation_system/face_listen/expression_analyzer/cnn_model/04776483.jpg'
     fr = cv2.imread(path)
@@ -36,8 +37,10 @@ def getExpression(path):
         fc = gray_fr[y:y+h, x:x+w]
         roi = cv2.resize(fc, (48, 48))
         pred = model.predict_emotion(roi[np.newaxis, :, :, np.newaxis])
+        print(pred)
         cv2.putText(fr, pred, (x, y), font, 1, (255, 255, 0), 2)
         cv2.rectangle(fr,(x,y),(x+w,y+h),(255,0,0),2)
-    return fr
+    # print(fr)
+    return pred
     
 # getExpression()

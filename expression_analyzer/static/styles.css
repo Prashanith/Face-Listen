@@ -16,18 +16,23 @@ nav {
   height: 360px;
 }
 
+.song{
+  text-decoration: none;
+  text-decoration-color: green;
+}
+
 #photo {
   border: 1px solid black;
   border-radius: 6px;  
-  width: 480px;
-  height: 360px;
+  width: 0;
+  height: 0;
 }
 
 #canvas {
   display: none;
 }
 
-.btn {
+/* .btn {
   
  
   outline: none;
@@ -37,7 +42,7 @@ nav {
   font-size: 14px;
   font-family: "Lucida Grande", "Arial", sans-serif;
   color: rgba(255, 255, 255, 1);
-}
+} */
 
 .contentarea {
   font-size: 16px;
@@ -47,6 +52,7 @@ nav {
 
 
 .btn {
+  outline: none;
   background-color: #FFFFFF;
   border: 1px solid rgb(209,213,219);
   border-radius: .5rem;
